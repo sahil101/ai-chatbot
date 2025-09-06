@@ -1,6 +1,12 @@
+import { Button } from "./components/ui/button";
 
 function App() {
-  return <h1>Hello World</h1>
+  return (
+    <div>
+      <h1>Hello World</h1>
+      <Button className="p-3 rounded-2xl">Click Me</Button>
+    </div>
+  );
 }
 
-export default App
+export default App;
