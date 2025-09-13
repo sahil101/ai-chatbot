@@ -1,15 +1,15 @@
 import express from 'express';
-import type { Request, Response } from 'express';
+
 import dotenv from 'dotenv';
-
+import { chatController } from './controllers/chat.controller';
 dotenv.config();
-const app = express();
 
+
+const app = express();
+app.use(express.json());
 const port = process.env.PORT || 3000;
 
-app.get('/', (req:  Request, res: Response) => { 
-    res.send("Hello World from Express and Bun!");
-})
+app.post('/api/chat', chatController.SendMessage)
 
 
 app.listen(port, () => {
