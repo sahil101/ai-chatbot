@@ -1,10 +1,9 @@
-import { Button } from './components/ui/button';
+import ChatBot from './components/ChatBot';
 
 function App() {
   return (
-    <div>
-      <h1>Hello World</h1>
-      <Button className="p-3 rounded-2xl">Click Me</Button>
+    <div className="p-4">
+      <ChatBot />
     </div>
   );
 }

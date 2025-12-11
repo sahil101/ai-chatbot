@@ -19,7 +19,7 @@ export const chatController = {
             }
             const { prompt, conversationId } = validation.data;
             const response = await chatService.sendMessage(conversationId, prompt);
-            res.json({ response: response.message });
+            res.json({ message: response.message });
         }
         catch (error) {
             console.error("Error communicating with OpenAI:", error);

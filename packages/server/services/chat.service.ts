@@ -20,7 +20,7 @@ export const chatService = {
             max_output_tokens: 100,
             previous_response_id: chatRepository.getConversationResponseId(conversationId),
         })
-        console.log(chatRepository.getConversationResponseId(conversationId));
+
         chatRepository.setConversationResponseId(conversationId, response.id);
         return { id: response.id, message: response.output_text } as ChatResponse;
     }
